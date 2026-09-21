@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Snake Arena is a premium browser arcade portal with four local games.">
+  <title>Snake Arena | Neon Arcade Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell" id="home">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Snake Arena home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span class="brand-name">Snake <b>Arena</b></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#how-to-play">How to Play</a>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-button" id="sound-toggle" type="button" aria-label="Toggle sound" aria-pressed="false" title="Toggle sound"><span aria-hidden="true">&#9835;</span></button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"><span aria-hidden="true">&#9680;</span></button>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> LIVE ARCADE / LOCAL PLAY</p>
+        <h1 id="hero-title">PLAY.<br><em>COMPETE.</em><br>CONQUER.</h1>
+        <p class="hero-subtitle">A precision-built browser arcade for quick reflexes, sharp strategy, and one more run.</p>
+        <div class="hero-actions"><button class="button button-primary" data-screen="snake-game-screen" type="button">Play Snake <span aria-hidden="true">&#8599;</span></button><a class="button button-ghost" href="#games-home-screen">Explore Games <span aria-hidden="true">&#8595;</span></a></div>
+        <div class="hero-meta"><span><strong>04</strong> games online</span><span><strong>0</strong> downloads</span><span><strong>100%</strong> local</span></div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true"><div class="orbit-ring orbit-ring-one"></div><div class="orbit-ring orbit-ring-two"></div><div class="orbit-core"><span>SA</span><small>EST. 2026</small></div><span class="orbit-label orbit-label-one">ARCADE</span><span class="orbit-label orbit-label-two">PLAY / LOCAL</span></div>
+    </section>
+
+    <section class="game-hub game-screen" id="games-home-screen" aria-labelledby="hub-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / THE ARCADE</p><h2 id="hub-title">Choose your weapon.</h2></div><span class="section-note">Four ways to play.<br>Infinite rematches.</span></div>
+      <div class="game-card-grid">
+        <article class="game-card game-card-snake"><div class="card-top"><span class="game-card-icon" aria-hidden="true">&#9679;</span><span class="difficulty difficulty-hot">HOT</span></div><div><p class="card-kicker">01 / CLASSIC</p><h3>Snake</h3><p>Grow your chain. Own the grid. Never touch the walls.</p></div><div class="card-bottom"><span class="card-stat">BEST <strong id="hub-snake-best">0</strong></span><button class="button card-play" data-screen="snake-game-screen" type="button">Play now <span aria-hidden="true">&#8599;</span></button></div></article>
+        <article class="game-card game-card-2048"><div class="card-top"><span class="game-card-icon" aria-hidden="true">2048</span><span class="difficulty">FOCUS</span></div><div><p class="card-kicker">02 / MERGE</p><h3>2048</h3><p>Slide with intent. Combine numbers. Reach the summit.</p></div><div class="card-bottom"><span class="card-stat">BEST <strong id="hub-2048-best">0</strong></span><button class="button card-play" data-screen="game-2048-screen" type="button">Play now <span aria-hidden="true">&#8599;</span></button></div></article>
+        <article class="game-card game-card-tic"><div class="card-top"><span class="game-card-icon" aria-hidden="true">X<span>O</span></span><span class="difficulty">DUEL</span></div><div><p class="card-kicker">03 / VERSUS CPU</p><h3>Tic-Tac-Toe</h3><p>Read the board. Break the pattern. Take the win.</p></div><div class="card-bottom"><span class="card-stat">RANK <strong>LOCAL</strong></span><button class="button card-play" data-screen="tic-tac-toe-screen" type="button">Play now <span aria-hidden="true">&#8599;</span></button></div></article>
+        <article class="game-card game-card-memory"><div class="card-top"><span class="game-card-icon" aria-hidden="true">&#10022;</span><span class="difficulty">CHILL</span></div><div><p class="card-kicker">04 / MATCH</p><h3>Memory Match</h3><p>Flip smart. Pair fast. Keep every symbol in mind.</p></div><div class="card-bottom"><span class="card-stat">BEST <strong id="hub-memory-best">--</strong></span><button class="button card-play" data-screen="memory-match-screen" type="button">Play now <span aria-hidden="true">&#8599;</span></button></div></article>
+      </div>
+    </section>
+
+    <section class="feature-grid" id="leaderboard">
+      <article class="feature-panel daily-panel"><div class="panel-heading"><p class="eyebrow">02 / DAILY CHALLENGE</p><span class="live-pill">TODAY</span></div><h2 id="daily-title">The daily grid awaits.</h2><p id="daily-copy">A new local challenge, seeded for every player today. No accounts. No tracking.</p><div class="daily-code"><span>SEED</span><strong id="daily-seed">000000</strong></div><button class="button button-ghost" data-screen="snake-game-screen" data-daily-challenge="true" type="button">Take the challenge <span aria-hidden="true">&#8594;</span></button></article>
+      <article class="feature-panel leaderboard-panel"><div class="panel-heading"><p class="eyebrow">03 / LEADERBOARD</p><span class="lock-mark" aria-hidden="true">&#9679;</span></div><h2>Local legends.</h2><p class="leaderboard-empty">Local leaderboard &mdash; online rankings coming soon.</p><div class="leader-line"><span>01</span><strong>Highest Snake score</strong><b id="leaderboard-snake-score">0</b></div><div class="leader-line"><span>02</span><strong>Longest survival</strong><b id="leaderboard-survival">00:00</b></div><div class="leader-line"><span>03</span><strong>Daily challenge score</strong><b id="leaderboard-daily">0</b></div></article>
+    </section>
+
+    <section class="how-to" id="how-to-play" aria-labelledby="how-title"><div class="section-heading"><div><p class="eyebrow">04 / HOW TO PLAY</p><h2 id="how-title">Learn the loop.</h2></div><span class="section-note">Simple rules.<br>Serious replay value.</span></div><div class="how-grid"><article><span class="how-number">01</span><h3>Snake</h3><p>Steer with arrows, WASD, or the D-pad. Eat sparks, grow longer, and protect your best run.</p></article><article><span class="how-number">02</span><h3>2048</h3><p>Slide every tile in one direction. Matching numbers merge. Fill the grid and the run ends.</p></article><article><span class="how-number">03</span><h3>Tic-Tac-Toe</h3><p>You are X. Place three marks in a row before the computer finds its line.</p></article><article><span class="how-number">04</span><h3>Memory Match</h3><p>Flip two cards at a time, remember the symbols, and clear the board in as few moves as possible.</p></article></div></section>
+
+    <main class="game-layout game-screen hidden screen-hidden" id="snake-game-screen">
+      <section class="intro-panel" aria-labelledby="game-title">
+        <p class="eyebrow">ARCADE / SOLO RUN</p>
+        <h1 id="game-title">Own the grid.</h1>
+        <p class="intro-copy">Collect sparks, grow your chain, and keep your run alive as long as you can.</p>
+        <div class="control-hint"><span class="key-cap">WASD</span><span class="key-cap">ARROWS</span><span>to steer</span></div>
+      </section>
+
+      <section class="game-panel" aria-label="Snake game">
+        <div class="stats-bar" aria-live="polite">
+          <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+          <div class="stat"><span>Best</span><strong id="best-score">0</strong></div>
+          <div class="stat"><span>Time</span><strong id="game-timer">00:00</strong></div>
+          <div class="stat lives-stat"><span>Lives</span><strong id="lives">3</strong></div>
+        </div>
+        <div class="arena-wrap">
+          <canvas id="game-canvas" width="720" height="540" aria-label="Snake game board"></canvas>
+          <div class="game-overlay" id="game-overlay">
+            <p class="eyebrow">READY WHEN YOU ARE</p>
+            <h2 id="overlay-title">Start your run</h2>
+            <p id="overlay-message">Use the arrow keys, WASD, or swipe the board.</p>
+            <button class="button button-primary" id="overlay-action" type="button">Start game</button>
+            <button class="button button-secondary" id="reward-button" type="button" hidden>Optional: Watch one ad for +1 extra life</button>
+            <div class="reward-confirmation" id="reward-confirmation" hidden role="dialog" aria-labelledby="reward-confirmation-title" aria-describedby="reward-confirmation-copy">
+              <strong id="reward-confirmation-title">Optional extra life</strong>
+              <p id="reward-confirmation-copy">Continue to request one rewarded ad, or cancel and play again without it.</p>
+              <div class="reward-confirmation-actions"><button class="button button-primary" id="reward-continue" type="button">Continue</button><button class="button button-secondary" id="reward-cancel" type="button">Cancel</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-controls" aria-label="Touch controls">
+          <button class="direction-button up" id="move-up" data-direction="up" aria-label="Move snake up" type="button">↑</button>
+          <button class="direction-button left" id="move-left" data-direction="left" aria-label="Move snake left" type="button">←</button>
+          <button class="direction-button right" id="move-right" data-direction="right" aria-label="Move snake right" type="button">→</button>
+          <button class="direction-button down" id="move-down" data-direction="down" aria-label="Move snake down" type="button">↓</button>
+        </div>
+        <div class="game-controls" aria-label="Game controls">
+          <button class="button button-primary" id="start-button" type="button">Start</button>
+          <button class="button button-secondary" id="pause-button" type="button">Pause</button>
+          <button class="button button-secondary" id="restart-button" type="button">Restart</button>
+        </div>
+        <aside class="provider-ad-slot" id="snake-monetag-ad-slot" aria-label="Snake Monetag advertisement placeholder">
+          <!-- PASTE_OFFICIAL_MONETAG_CODE_HERE -->
+          <span class="provider-ad-label">Advertisement</span>
+          <span>Monetag ad slot ready</span>
+        </aside>
+        <section class="sponsored-offers" aria-labelledby="snake-sponsored-title">
+          <!-- Provider: Monetag SmartLink; game mapping: Snake. -->
+          <p class="ad-label" id="snake-sponsored-title">Sponsored Offers</p>
+          <p>Optional external sponsored offer. Opens in a new tab.</p>
+          <!-- Monetag SmartLink for Snake: manual click only. -->
+          <a class="sponsored-button" href="https://omg10.com/4/11851710" target="_blank" rel="nofollow sponsored noopener noreferrer">View optional sponsored offer</a>
+        </section>
+      </section>
+    </main>
+
+    <main class="game-screen hidden screen-hidden" id="game-2048-screen" aria-labelledby="game-2048-title">
+      <section class="arcade-screen compact-screen">
+        <div class="screen-heading"><div><p class="eyebrow">MERGE / 4 x 4 GRID</p><h1 id="game-2048-title">2048</h1></div><div class="score-pair"><span>Score <strong id="twenty48-score">0</strong></span><span>Best <strong id="twenty48-best">0</strong></span></div></div>
+        <p class="screen-status" id="twenty48-status" aria-live="polite">Join the numbers.</p>
+        <div class="twenty48-board" id="twenty48-board" aria-label="2048 board"></div>
+        <div class="screen-controls"><button class="button button-primary" id="twenty48-new" type="button">New game</button><button class="button button-secondary back-to-games" data-screen="games-home-screen" type="button">Back to Games</button></div>
+        <aside class="provider-ad-slot" id="game2048-adsterra-ad-slot" aria-label="2048 Adsterra advertisement placeholder">
+          <!-- PASTE_OFFICIAL_ADSTERRA_CODE_HERE -->
+          <span class="provider-ad-label">Advertisement</span>
+          <span>Adsterra ad slot ready</span>
+        </aside>
+        <section class="sponsored-offers" aria-labelledby="game2048-sponsored-title">
+          <!-- Provider: Adsterra Direct Link / SmartLink; game mapping: 2048. -->
+          <p class="ad-label" id="game2048-sponsored-title">Sponsored Offers</p>
+          <p>Optional external sponsored offer. Opens in a new tab.</p>
+          <!-- Adsterra Direct Link / SmartLink for 2048: manual click only. -->
+          <a class="sponsored-button" href="https://www.profitableratecpmnetwork.com/fsxzuv73x3?key=27b2a2a1b892c53e474e8101e7b5e862" target="_blank" rel="nofollow sponsored noopener noreferrer">View optional sponsored offer</a>
+        </section>
+      </section>
+    </main>
+
+    <main class="game-screen hidden screen-hidden" id="tic-tac-toe-screen" aria-labelledby="tic-title">
+      <section class="arcade-screen compact-screen">
+        <div class="screen-heading"><div><p class="eyebrow">DUEL / PLAYER VS CPU</p><h1 id="tic-title">Tic-Tac-Toe</h1></div><div class="score-pair"><span>You <strong id="tic-score">0</strong></span><span>CPU <strong id="tic-cpu-score">0</strong></span></div></div>
+        <p class="screen-status" id="tic-status" aria-live="polite">Your move. You are X.</p>
+        <div class="tic-board" id="tic-board" role="grid" aria-label="Tic-Tac-Toe board"></div>
+        <div class="screen-controls"><button class="button button-primary" id="tic-new" type="button">New game</button><button class="button button-secondary back-to-games" data-screen="games-home-screen" type="button">Back to Games</button></div>
+        <aside class="provider-ad-slot" id="tictactoe-monetag-ad-slot" aria-label="Tic-Tac-Toe Monetag advertisement placeholder">
+          <!-- PASTE_OFFICIAL_MONETAG_CODE_HERE -->
+          <span class="provider-ad-label">Advertisement</span>
+          <span>Monetag ad slot ready</span>
+        </aside>
+        <section class="sponsored-offers" aria-labelledby="tictactoe-sponsored-title">
+          <!-- Provider: Monetag SmartLink; game mapping: Tic-Tac-Toe. -->
+          <p class="ad-label" id="tictactoe-sponsored-title">Sponsored Offers</p>
+          <p>Optional external sponsored offer. Opens in a new tab.</p>
+          <!-- Monetag SmartLink for Tic-Tac-Toe: manual click only. -->
+          <a class="sponsored-button" href="https://omg10.com/4/11851710" target="_blank" rel="nofollow sponsored noopener noreferrer">View optional sponsored offer</a>
+        </section>
+      </section>
+    </main>
+
+    <main class="game-screen hidden screen-hidden" id="memory-match-screen" aria-labelledby="memory-title">
+      <section class="arcade-screen compact-screen">
+        <div class="screen-heading"><div><p class="eyebrow">MATCH / MEMORY GRID</p><h1 id="memory-title">Memory Match</h1></div><div class="score-pair"><span>Moves <strong id="memory-moves">0</strong></span><span>Time <strong id="memory-time">00:00</strong></span></div></div>
+        <p class="screen-status" id="memory-status" aria-live="polite">Find every pair.</p>
+        <div class="memory-board" id="memory-board" aria-label="Memory Match cards"></div>
+        <div class="screen-controls"><button class="button button-primary" id="memory-new" type="button">Restart</button><button class="button button-secondary back-to-games" data-screen="games-home-screen" type="button">Back to Games</button></div>
+        <aside class="provider-ad-slot" id="memory-adsterra-ad-slot" aria-label="Memory Match Adsterra advertisement placeholder">
+          <!-- PASTE_OFFICIAL_ADSTERRA_CODE_HERE -->
+          <span class="provider-ad-label">Advertisement</span>
+          <span>Adsterra ad slot ready</span>
+        </aside>
+        <section class="sponsored-offers" aria-labelledby="memory-sponsored-title">
+          <!-- Provider: Adsterra Direct Link / SmartLink; game mapping: Memory Match. -->
+          <p class="ad-label" id="memory-sponsored-title">Sponsored Offers</p>
+          <p>Optional external sponsored offer. Opens in a new tab.</p>
+          <!-- Adsterra Direct Link / SmartLink for Memory Match: manual click only. -->
+          <a class="sponsored-button" href="https://www.profitableratecpmnetwork.com/fsxzuv73x3?key=27b2a2a1b892c53e474e8101e7b5e862" target="_blank" rel="nofollow sponsored noopener noreferrer">View optional sponsored offer</a>
+        </section>
+      </section>
+    </main>
+
+    <aside class="ad-placeholder banner-ad" id="banner-ad-slot" aria-label="Advertisement placeholder">
+      <span class="ad-label">Advertisement &mdash; banner slot ready</span>
+      <small>No advertising network is connected in this demo.</small>
+    </aside>
+
+    <footer class="footer">
+      <div><span class="footer-brand">SNAKE ARENA</span><span>&copy; 2026</span></div>
+      <div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div>
+    </footer>
+  </div>
+
+  <script src="snake.js"></script>
+  <script src="ads.js"></script>
+  <script src="app.js"></script>
+  <script src="game-2048.js"></script>
+  <script src="tic-tac-toe.js"></script>
+  <script src="memory-match.js"></script>
+  <script src="game-hub.js"></script>
+</body>
+</html>
